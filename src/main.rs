@@ -21,16 +21,6 @@ fn shell_sort(array: &mut Vec<i16>) {
     }
 }
 
-fn print_array(vector: &Vec<i16>) {
-    let output = vector
-        .iter()
-        .map(|&num| num.to_string())
-        .collect::<Vec<String>>()
-        .join(" ");
-
-    println!("{output}");
-}
-
 fn main() {
     let mut input = String::new();
 
@@ -45,5 +35,12 @@ fn main() {
 
     shell_sort(&mut array);
 
-    print_array(&array);
+    println!(
+        "{}",
+        array
+            .iter()
+            .map(|&num| num.to_string())
+            .collect::<Vec<String>>()
+            .join(" ")
+    );
 }
