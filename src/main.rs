@@ -1,13 +1,13 @@
 use std::io;
 
 fn shell_sort(array: &mut Vec<i16>) {
-    let len_array: usize = array.len();
-    let mut gap: usize = len_array / 2;
+    let len_array = array.len();
+    let mut gap = len_array / 2;
 
     while gap > 0 {
         for i in gap..len_array {
-            let temp: i16 = array[i];
-            let mut j: usize = i;
+            let temp = array[i];
+            let mut j = i;
 
             while (j >= gap) && (array[j - gap] > temp) {
                 array[j] = array[j - gap];
